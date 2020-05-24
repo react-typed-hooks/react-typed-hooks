@@ -18,6 +18,9 @@ module.exports = function (plop) {
         templateFiles: path.join(__dirname, ".plop", "hook", "**/*"),
         base: path.join(__dirname, ".plop", "hook"),
         skipIfExists: true,
+        globOptions: {
+          dot: true,
+        },
       },
     ],
   });

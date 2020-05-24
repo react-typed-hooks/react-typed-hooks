@@ -1,5 +1,5 @@
 {
-  "name": "@use-typed-hooks/{{ dashCase name }}",
+  "name": "@react-typed-hooks/{{ dashCase name }}",
   "version": "0.1.0-alpha",
   "description": "React hook written in TypeScript",
   "main": "dist/index.js",
@@ -8,6 +8,7 @@
     "build": "npm run clean && npm run compile",
     "clean": "rimraf dist",
     "compile": "tsc -p tsconfig.build.json",
+    "lint": "eslint src/**/*.ts",
     "test": "jest"
   },
   "repository": {
