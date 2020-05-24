@@ -1,0 +1,28 @@
+{
+  "name": "@use-typed-hooks/{{ dashCase name }}",
+  "version": "0.1.0-alpha",
+  "description": "React hook written in TypeScript",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "npm run clean && npm run compile",
+    "clean": "rimraf dist",
+    "compile": "tsc -p tsconfig.build.json",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/react-typed-hooks/react-typed-hooks.git"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "typescript"
+  ],
+  "author": "Christopher Dierkens",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/react-typed-hooks/react-typed-hooks/issues"
+  },
+  "homepage": "https://github.com/react-typed-hooks/react-typed-hooks#readme"
+}
