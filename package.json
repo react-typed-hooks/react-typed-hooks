@@ -8,6 +8,7 @@
     "publish": "lerna publish",
     "lint": "lerna run lint --parallel",
     "test": "lerna run test --stream",
+    "test:watch": "lerna exec -- npm run test -- --watch",
     "postinstall": "npm run bootstrap"
   },
   "devDependencies": {
