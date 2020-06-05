@@ -1,0 +1,26 @@
+---
+name: Main
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Test
+        run: |
+          npm ci
+          npm test
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Lint
+        run: |
+          npm ci
+          npm run lint
