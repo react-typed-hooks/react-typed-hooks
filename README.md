@@ -3,7 +3,7 @@
 A collection of hooks written in TypeScript
 
 ![TypeScript](https://badgen.net/badge/icon/typescript?icon=typescript&label)
-![Dependabot](https://badgen.net/dependabot/react-typed-hooks/react-typed-hooks?icon=dependabot)
+![Dependabot](https://badgen.net/dependabot/react-typed-hooks/react-typed-hooks/266407700?icon=dependabot)
 ![CI Build](https://github.com/react-typed-hooks/react-typed-hooks/workflows/build/badge.svg)
 
 ## Motivation
