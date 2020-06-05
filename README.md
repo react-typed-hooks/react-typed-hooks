@@ -4,7 +4,7 @@ A collection of hooks written in TypeScript
 
 ![https://www.typescriptlang.org/](https://badgen.net/badge/icon/typescript?icon=typescript&label)
 ![https://dependabot.com/](https://badgen.net/dependabot/react-typed-hooks/react-typed-hooks?icon=dependabot)
-![https://github.com/react-typed-hooks/react-typed-hooks/actions?query=workflow%3AMain](https://github.com/react-typed-hooks/react-typed-hooks/workflows/main/badge.svg)
+![https://github.com/react-typed-hooks/react-typed-hooks/actions?query=workflow%3Abuild](https://github.com/react-typed-hooks/react-typed-hooks/workflows/build/badge.svg)
 
 ## Motivation
 
