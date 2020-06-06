@@ -4,6 +4,8 @@ A collection of hooks written in TypeScript
 
 ![TypeScript](https://badgen.net/badge/icon/typescript?icon=typescript&label)
 ![Dependabot](https://badgen.net/dependabot/react-typed-hooks/react-typed-hooks/266407700?icon=dependabot)
+![Dependencies](https://david-dm.org/react-typed-hooks/react-typed-hooks.svg)
+![Vulnerabilities](https://badgen.net/snyk/react-typed-hooks/react-typed-hooks)
 ![CI Build](https://github.com/react-typed-hooks/react-typed-hooks/workflows/build/badge.svg)
 [![codecov](https://codecov.io/gh/react-typed-hooks/react-typed-hooks/branch/master/graph/badge.svg)](https://codecov.io/gh/react-typed-hooks/react-typed-hooks)
 

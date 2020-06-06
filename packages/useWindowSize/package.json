@@ -25,5 +25,9 @@
   "bugs": {
     "url": "https://github.com/react-typed-hooks/react-typed-hooks/issues"
   },
-  "homepage": "https://github.com/react-typed-hooks/react-typed-hooks#readme"
+  "homepage": "https://github.com/react-typed-hooks/react-typed-hooks#readme",
+  "dependencies": {
+    "@types/lodash": "^4.14.155",
+    "lodash": "^4.17.15"
+  }
 }

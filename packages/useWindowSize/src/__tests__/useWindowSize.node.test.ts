@@ -7,13 +7,10 @@ import { useWindowSize } from "../";
 
 describe("node", () => {
   describe("useWindowSize", () => {
-    it("should return undefined height and width", () => {
+    it("should return null", () => {
       const { result } = renderHook(() => useWindowSize());
 
-      expect(result.current).toEqual({
-        height: undefined,
-        width: undefined,
-      });
+      expect(result.current).toBe(null);
     });
   });
 });

@@ -1,37 +1,67 @@
+import { delay, throttle } from "lodash";
 import { useCallback, useEffect, useState } from "react";
 
 interface Size {
-  height?: number;
-  width?: number;
+  height: number;
+  width: number;
 }
 
-const useWindowSize: () => Size = () => {
-  const isClient = typeof window === "object";
+interface UseWindowSizeOptions {
+  wait?: number;
+}
 
-  const getSize = useCallback(() => {
-    return {
-      width: isClient ? window.innerWidth : undefined,
-      height: isClient ? window.innerHeight : undefined,
-    };
-  }, [isClient]);
+const hasWindow = typeof window === "object";
 
-  const [windowSize, setWindowSize] = useState(getSize);
+const getSize: () => Size | null = () =>
+  hasWindow
+    ? {
+        width: window.innerWidth,
+        height: window.innerHeight,
+      }
+    : null;
+
+export default function useWindowSize({
+  wait = 200,
+}: UseWindowSizeOptions = {}): Size | null {
+  const [windowSize, setWindowSize] = useState(getSize());
+  const baseHandler = useCallback(() => setWindowSize(getSize()), []);
+  const orientationHandler = useCallback(() => {
+    delay(baseHandler, wait);
+  }, [baseHandler, wait]);
+  const resizeHandler = useCallback(() => throttle(baseHandler, wait), [
+    baseHandler,
+    wait,
+  ]);
 
   useEffect(() => {
-    if (!isClient) {
+    if (!hasWindow) {
       return;
     }
 
-    function handleResize() {
-      setWindowSize(getSize());
+    const mediaQuery = window.matchMedia("(orientation: portrait)");
+
+    mediaQuery.addListener(orientationHandler);
+
+    return () => {
+      mediaQuery.removeListener(orientationHandler);
+    };
+  }, [orientationHandler]);
+
+  useEffect(() => {
+    if (!hasWindow) {
+      return;
     }
 
-    window.addEventListener("resize", handleResize);
+    const callback = throttle(resizeHandler, wait);
 
-    return () => window.removeEventListener("resize", handleResize);
-  }, [getSize, isClient]);
+    window.addEventListener("resize", callback, {
+      passive: true,
+    });
+
+    return () => {
+      window.removeEventListener("resize", callback);
+    };
+  }, [resizeHandler]);
 
   return windowSize;
-};
-
-export default useWindowSize;
+}
