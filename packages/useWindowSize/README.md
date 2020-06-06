@@ -2,6 +2,8 @@
 
 React hook that returns the window size. Updates on window resize and orientation change.
 
+![version](https://badgen.net/npm/v/@react-typed-hooks/use-window-size)
+
 ## Installation
 
 ```bash
