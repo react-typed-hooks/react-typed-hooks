@@ -1,1 +1,1 @@
-export * from "./useWindowSize";
+export { default as useWindowSize } from "./useWindowSize";

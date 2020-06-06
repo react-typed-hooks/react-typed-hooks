@@ -3,7 +3,7 @@
  */
 
 import { renderHook } from "@testing-library/react-hooks";
-import useWindowSize from "../useWindowSize";
+import { useWindowSize } from "../";
 
 describe("node", () => {
   describe("useWindowSize", () => {

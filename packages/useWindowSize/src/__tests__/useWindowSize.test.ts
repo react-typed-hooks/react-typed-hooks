@@ -1,5 +1,5 @@
 import { act, renderHook } from "@testing-library/react-hooks";
-import useWindowSize from "../useWindowSize";
+import { useWindowSize } from "../";
 
 const defaultHeight = window.innerHeight;
 const defaultWidth = window.innerHeight;
