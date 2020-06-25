@@ -24,10 +24,13 @@ export default function useWindowSize({
   wait = 200,
 }: UseWindowSizeOptions = {}): Size | null {
   const [windowSize, setWindowSize] = useState(getSize());
+
   const baseHandler = useCallback(() => setWindowSize(getSize()), []);
+
   const orientationHandler = useCallback(() => {
     delay(baseHandler, wait);
   }, [baseHandler, wait]);
+
   const resizeHandler = useCallback(() => throttle(baseHandler, wait), [
     baseHandler,
     wait,
@@ -52,14 +55,12 @@ export default function useWindowSize({
       return;
     }
 
-    const callback = throttle(resizeHandler, wait);
-
-    window.addEventListener("resize", callback, {
+    window.addEventListener("resize", resizeHandler, {
       passive: true,
     });
 
     return () => {
-      window.removeEventListener("resize", callback);
+      window.removeEventListener("resize", resizeHandler);
     };
   }, [resizeHandler]);
 
