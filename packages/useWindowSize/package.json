@@ -12,7 +12,8 @@
     "clean": "rimraf dist",
     "compile": "tsc -p tsconfig.build.json",
     "lint": "eslint src/**/*.ts",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "repository": {
     "type": "git",
