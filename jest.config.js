@@ -7,6 +7,7 @@ module.exports = {
     "**/*.{ts,tsx}",
     "!**/__test__/**",
     "!**/node_modules/**",
+    "!**/dist/**",
   ],
   setupFilesAfterEnv: [path.join(__dirname, "jest", "jest.setup.js")],
 };
