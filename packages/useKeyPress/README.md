@@ -16,7 +16,7 @@ npm install @react-typed-hooks/use-key-press
 import { useKeyPress } from "@react-typed-hooks/use-key-press";
 
 const Demo = () => {
-  const isEscapePressed = useKeyPress("Escape");
+  const isEscapePressed = useKeyPress({ targetKey: "Escape" });
 
   return isEscapePressed ? "Yes" : "No";
 };
