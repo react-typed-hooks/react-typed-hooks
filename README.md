@@ -13,7 +13,12 @@ A collection of hooks written in TypeScript
 
 ## Hooks
 
+- [useKeyPress](packages/useKeyPress)
+- [useWindowSize](packages/useWindowSize)
+
 ## Contributing
+
+Run `npm run generate` from the root packages to generate a new hook. 
 
 ### NPM Script
 
