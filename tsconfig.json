@@ -3,7 +3,7 @@
   "compilerOptions": {
     "baseUrl": "./packages",
     "paths": {
-      "@use-typed-hooks/*": ["*/src"]
+      "@react-typed-hooks/*": ["*/src"]
     }
   }
 }

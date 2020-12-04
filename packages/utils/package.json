@@ -1,7 +1,7 @@
 {
-  "name": "@react-typed-hooks/{{ dashCase name }}",
-  "version": "1.0.0-alpha",
-  "description": "React hook written in TypeScript",
+  "name": "@react-typed-hooks/utils",
+  "version": "1.0.0",
+  "description": "Utils for React hook written in TypeScript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -26,8 +26,5 @@
   "bugs": {
     "url": "https://github.com/react-typed-hooks/react-typed-hooks/issues"
   },
-  "homepage": "https://github.com/react-typed-hooks/react-typed-hooks#readme",
-  "dependencies": {
-    "@react-typed-hooks/utils": "^1.0.0"
-  }
+  "homepage": "https://github.com/react-typed-hooks/react-typed-hooks#readme"
 }

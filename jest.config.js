@@ -9,5 +9,6 @@ module.exports = {
     "!**/node_modules/**",
     "!**/dist/**",
   ],
+  setupFiles: ["jest-localstorage-mock"],
   setupFilesAfterEnv: [path.join(__dirname, "jest", "jest.setup.js")],
 };

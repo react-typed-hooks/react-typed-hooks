@@ -1,3 +1,6 @@
-const {{ camelCase name }}: () => string = () => "{{ camelCase name }}";
+import { hasWindow } from "@react-typed-hooks/utils";
+
+const {{ camelCase name }}: () => string | boolean = () =>
+  hasWindow() ? "{{ camelCase name }}" : false;
 
 export default {{ camelCase name }};

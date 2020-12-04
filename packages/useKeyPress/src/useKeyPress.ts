@@ -1,3 +1,4 @@
+import { hasWindow } from "@react-typed-hooks/utils";
 import { useCallback, useEffect, useState } from "react";
 
 interface UseKeyPressOptions {
@@ -28,7 +29,7 @@ export default function useKeyPress({
   );
 
   useEffect(() => {
-    if (typeof window !== "object") {
+    if (!hasWindow()) {
       return;
     }
 

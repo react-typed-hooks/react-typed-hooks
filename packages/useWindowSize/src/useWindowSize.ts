@@ -1,3 +1,4 @@
+import { hasWindow } from "@react-typed-hooks/utils";
 import { delay, throttle } from "lodash";
 import { useCallback, useEffect, useState } from "react";
 
@@ -10,10 +11,8 @@ interface UseWindowSizeOptions {
   wait?: number;
 }
 
-const hasWindow = typeof window === "object";
-
 const getSize: () => Size | null = () =>
-  hasWindow
+  hasWindow()
     ? {
         width: window.innerWidth,
         height: window.innerHeight,
@@ -37,7 +36,7 @@ export default function useWindowSize({
   ]);
 
   useEffect(() => {
-    if (!hasWindow) {
+    if (!hasWindow()) {
       return;
     }
 
@@ -51,7 +50,7 @@ export default function useWindowSize({
   }, [orientationHandler]);
 
   useEffect(() => {
-    if (!hasWindow) {
+    if (!hasWindow()) {
       return;
     }
 

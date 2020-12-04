@@ -1,0 +1,10 @@
+import { renderHook } from "@testing-library/react-hooks";
+import { {{ camelCase name }} } from "../";
+
+describe("{{ camelCase name }}", () => {
+  test("should render the hook", () => {
+    const { result } = renderHook(() => {{ camelCase name }}());
+
+    expect(result.current).toBe("{{ camelCase name }}");
+  });
+});

@@ -7,7 +7,7 @@
     "generate": "plop && npm run bootstrap",
     "publish": "lerna publish --contents dist",
     "lint": "lerna run lint --parallel",
-    "test": "lerna run test --stream",
+    "test": "lerna run test --parallel",
     "postinstall": "npm run bootstrap",
     "prepublish": "npm run build"
   },
@@ -18,11 +18,13 @@
     "@types/jest": "^26.0.0",
     "@typescript-eslint/eslint-plugin": "^4.0.0",
     "@typescript-eslint/parser": "^3.0.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.1.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-react-hooks": "^4.0.2",
     "husky": "^4.2.5",
     "jest": "^26.0.1",
+    "jest-localstorage-mock": "^2.4.3",
     "lerna": "^3.21.0",
     "lint-staged": "^10.2.6",
     "plop": "^2.7.1",
@@ -45,5 +47,10 @@
   },
   "prettier": {
     "trailingComma": "all"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
