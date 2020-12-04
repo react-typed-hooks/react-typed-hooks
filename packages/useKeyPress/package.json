@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/react-typed-hooks/react-typed-hooks/issues"
   },
-  "homepage": "https://github.com/react-typed-hooks/react-typed-hooks#readme"
+  "homepage": "https://github.com/react-typed-hooks/react-typed-hooks#readme",
+  "dependencies": {
+    "@react-typed-hooks/utils": "^1.0.0"
+  }
 }

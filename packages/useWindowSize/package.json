@@ -31,6 +31,7 @@
   },
   "homepage": "https://github.com/react-typed-hooks/react-typed-hooks#readme",
   "dependencies": {
+    "@react-typed-hooks/utils": "^1.0.0",
     "@types/lodash": "^4.14.155",
     "lodash": "^4.17.15"
   }
