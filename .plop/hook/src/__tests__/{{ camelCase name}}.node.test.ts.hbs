@@ -8,7 +8,7 @@ import { {{ camelCase name }} } from "../";
 describe("node", () => {
   describe("{{ camelCase name }}", () => {
     it("should return null", () => {
-      const { result } = renderHook(() => {{ camelCase name }}({ targetKey: "Escape" }));
+      const { result } = renderHook(() => {{ camelCase name }}());
 
       expect(result.current).toBe(false);
     });
