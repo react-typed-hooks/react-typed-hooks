@@ -1,6 +1,6 @@
 {
   "name": "@react-typed-hooks/use-local-storage",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.3",
   "description": "React hook written in TypeScript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -28,6 +28,6 @@
   },
   "homepage": "https://github.com/react-typed-hooks/react-typed-hooks#readme",
   "dependencies": {
-    "@react-typed-hooks/utils": "^1.0.3"
+    "@react-typed-hooks/utils": "^1.0.4"
   }
 }
