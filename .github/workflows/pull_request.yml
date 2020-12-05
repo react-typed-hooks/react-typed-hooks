@@ -1,7 +1,7 @@
 ---
-name: build
+name: Pull Request
 
-on: [push]
+on: [pull_request]
 
 jobs:
   test:
@@ -9,7 +9,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "12"
       - name: Test
         run: |
           npm ci
@@ -21,7 +23,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "12"
       - name: Lint
         run: |
           npm ci
@@ -32,8 +36,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
-      - name: Lint
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "12"
+      - name: Build
         run: |
           npm ci
           npm run build
