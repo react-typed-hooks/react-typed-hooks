@@ -1,6 +1,6 @@
 {
   "name": "@react-typed-hooks/utils",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Utils for React hook written in TypeScript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
