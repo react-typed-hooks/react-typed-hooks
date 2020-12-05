@@ -5,7 +5,7 @@
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build --stream",
     "generate": "plop && npm run bootstrap",
-    "publish": "lerna publish --contents dist --conventional-commits --create-release github --yes",
+    "publish": "lerna publish --conventional-commits --create-release github --yes",
     "lint": "lerna run lint --parallel",
     "test": "lerna run test --parallel",
     "postinstall": "npm run bootstrap",
