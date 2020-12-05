@@ -46,6 +46,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: "0"
       - uses: actions/setup-node@v1
         with:
           node-version: "12"
@@ -55,8 +57,9 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          npm config set access public
+          git fetch --depth=1 origin +refs/tags/*:refs/tags/*
           git config user.email "actions@github.com"
           git config user.name "Github actions"
+          npm config set access public
           npm ci
           npm run publish

@@ -1,0 +1,6 @@
+{
+  "assignees": ["cdierkens"],
+  "extends": ["config:base"],
+  "semanticCommits": true,
+  "commitMessageSuffix": "[skip ci]"
+}
