@@ -21,6 +21,7 @@ jobs:
       - name: Test
         run: |
           npm ci
+          npm run build
           npm test
           bash <(curl -s https://codecov.io/bash)
 
