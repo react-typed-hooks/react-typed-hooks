@@ -53,5 +53,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
+          git config user.email "actions@github.com"
+          git config user.name "Github actions"
           npm ci
           npm run publish

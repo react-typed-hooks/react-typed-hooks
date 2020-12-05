@@ -9,7 +9,7 @@
     "lint": "lerna run lint --parallel",
     "test": "lerna run test --parallel",
     "postinstall": "npm run bootstrap",
-    "prepublish": "npm run build"
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.9.0",
